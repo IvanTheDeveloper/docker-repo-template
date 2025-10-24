@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 8080:8443
+    environment: 
+      - ENV=production
+      - CONTAINER_PORT=8443
+    command:
